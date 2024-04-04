@@ -45,4 +45,7 @@ public class Usuario {
 
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private List<Reserva> reservas = new ArrayList<>();
+
+    @OneToMany(mappedBy = "usuario",fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    private List<Favorito> favorito = new ArrayList<>();
 }
